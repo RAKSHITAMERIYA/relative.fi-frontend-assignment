@@ -1,3 +1,4 @@
+import { cardBackground } from "src/assets/images";
 import { formatCurrency } from "src/utils/helpers";
 import { Coin } from "src/utils/interfaces";
 
@@ -18,8 +19,13 @@ export const Card = ({ coin }: Props) => {
   };
 
   return (
-    <div className="w-full min-w-[290px] md:max-w-[290px] relative bg-card flex flex-col items-center p-4 rounded-2xl">
-      <div className="flex w-[100px] h-[100px] justify-center items-center absolute -top-10 bg-cardIcon rounded-full">
+    <div
+      style={{
+        backgroundImage: `url(${cardBackground})`,
+      }}
+      className="w-full min-w-[290px] md:max-w-[290px] relative bg-card flex flex-col items-center p-4 rounded-2xl"
+    >
+      <div className="flex w-[100px] h-[100px] justify-center items-center absolute -top-12 bg-cardIcon rounded-full">
         <Icon />
       </div>
       <h5 className="mt-14 text-xs text-primaryDark leading-8">{name}</h5>
